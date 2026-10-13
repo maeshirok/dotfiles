@@ -1,0 +1,17 @@
+# Ghostty の設定
+# 参考: craftzdog/dotfiles(個人のキー設定は含めない)
+
+# 見た目
+theme = "Solarized Dark Patched"
+background = #031219
+background-opacity = 0.9
+background-blur-radius = 20
+font-family = "PlemolJP Console NF"
+cursor-style = block
+cursor-style-blink = true
+
+# 左 Option を Alt として扱う(右 Option では特殊文字を入力できる)
+macos-option-as-alt = left
+
+# 起動するシェル(Ghostty から起動するときだけ fish を使う。ログインシェルは変更しない)
+command = /opt/homebrew/bin/fish
