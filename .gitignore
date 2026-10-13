@@ -1,0 +1,71 @@
+# ============================================================
+# 機密情報・不要ファイルを誤ってコミットしないための除外設定
+# このリポジトリは公開(Public)です。迷ったら追加せず、除外してください。
+# ============================================================
+
+# --- 環境変数・シークレット -------------------------------------
+.env
+.env.*
+*.env
+secrets*
+*.secret
+*.secrets
+config-local.fish
+*.local
+
+# --- 認証情報・鍵 -----------------------------------------------
+.ssh/
+id_rsa*
+id_ed25519*
+id_ecdsa*
+*.pem
+*.key
+*.p12
+*.pfx
+*.gpg
+*.asc
+.netrc
+.npmrc
+.pypirc
+
+# --- 各種ツールの認証ファイル ----------------------------------
+auth.json
+hosts.yml
+.claude.json
+.codex/
+.ollama/
+.docker/config.json
+credentials*
+token*
+
+# --- fish の自動生成ファイル(環境ごとの値・履歴が入る) ----------
+fish_variables
+fish_history
+
+# --- 履歴・キャッシュ・ログ ------------------------------------
+*.log
+*_history
+.zsh_sessions/
+.lesshst
+.viminfo
+.cache/
+
+# --- バックアップ・一時ファイル --------------------------------
+.dotfiles-backup/
+*.bak
+*.orig
+*.swp
+*~
+
+# --- macOS -----------------------------------------------------
+.DS_Store
+
+# --- 取得物・生成物(管理対象外) -------------------------------
+# nvim: LazyVim スターターの .git は削除して配置する
+.config/nvim/.git/
+# tmux: tpm と各プラグイン本体(取得したもの)
+.config/tmux/plugins/
+# fish: Fisher で入れたプラグイン本体(一覧は fish_plugins で管理)
+.config/fish/functions/
+.config/fish/conf.d/
+.config/fish/completions/
